@@ -1,0 +1,41 @@
+body {
+  background-color: #164e63;
+  background-image: url("./assets/logo-bolivia.png");
+  background-position: fixed;
+  background-size: 18%;
+}
+
+.one {
+  background-color: #083344;
+}
+
+.two {
+  background-color: #083344;
+}
+
+.three {
+  background-color: #083344;
+}
+
+.four {
+  background-color: #083344;
+}
+
+.login-animate {
+  background-color: rgb(30 41 59 / .8);
+  padding-inline: 25px;
+  padding-block: 15px;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  text-align: center;
+  top: -100px;
+  opacity: 0;
+  animation: login-animate .5s ease-in-out forwards;
+}
+
+@keyframes login-animate {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

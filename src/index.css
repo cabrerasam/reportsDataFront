@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+  all: unset;
+}
+
+textarea {
+  all: unset;
+}
