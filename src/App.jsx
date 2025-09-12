@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import './App.css'
-import NavMenu from './components/molecules/NavMenu'
 import stop from '../src/assets/stop.svg'
 import { URL } from '../src/helpers/config'
+import Nav from './components/molecules/Nav'
 
 function App () {
   const [nick, setNick] = useState('')
   const [role, setRole] = useState('')
+  const [name, setName] = useState('')
 
   useEffect(() => {
     fetch(`${URL}/login/authorized`, {
@@ -15,8 +16,10 @@ function App () {
     })
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         setNick(data.user.userNick)
         setRole(data.user.idRole)
+        setName(data.user.userName)
       })
       .catch(error => console.error('Error:', error))
   }, [])
@@ -40,7 +43,7 @@ function App () {
 
   return (
     <>
-      <NavMenu name={nick} idRole={role} />
+      <Nav name={name} role={role} />
       <Outlet />
     </>
   )
