@@ -151,7 +151,7 @@ const CreateReport = () => {
           </label>
           <button className='bg-cyan-700 text-white px-2 py-1 rounded-md' type='submit'>crear Noticias</button>
         </form>
-        <section className='p-4 w-[900px] h-[390px] bg-cyan-950 overflow-auto flex flex-col gap-2 justify-self-center self-center col-span-2'>
+        <section className='p-4 w-[calc(100%_-_18px)] h-[390px] bg-cyan-950 overflow-auto flex flex-col gap-2 justify-self-center self-center col-span-2'>
           <h2 className='text-white font-medium text-center text-lg mt-4'>Noticias agregadas</h2>
           <section className='flex flex-col overflow-auto'>
             {
