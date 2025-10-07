@@ -16,7 +16,6 @@ function App () {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setNick(data.user.userNick)
         setRole(data.user.idRole)
         setName(data.user.userName)

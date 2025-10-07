@@ -9,3 +9,7 @@ input {
 textarea {
   all: unset;
 }
+
+select {
+  all: unset;
+}
