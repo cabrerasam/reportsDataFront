@@ -37,7 +37,7 @@ const Nav = ({ role, name }) => {
           <ul className='bg-cyan-950 absolute mt-5 flex gap-3 px-4 py-2 border-t border-cyan-700' style={{ display: state ? 'flex' : 'none' }}>
             <li className='hover:cursor-pointer hover:text-custom-red' onClick={changeState}><a href='/createReport'>Generar Informe</a></li>
             <li className='w-[1px] h-[30px] bg-cyan-700' />
-            <li className='hover:cursor-pointer hover:text-custom-red' onClick={changeState}>Historial de Informes</li>
+            <li className='hover:cursor-pointer hover:text-custom-red' onClick={changeState}><a href='/reports'>Historial de Informes</a></li>
           </ul>
         </li>
         <li className='flex justify-center items-center'>

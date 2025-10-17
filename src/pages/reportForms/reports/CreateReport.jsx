@@ -133,11 +133,11 @@ const CreateReport = () => {
         </form>
         <section className='w-[450px] h-[390px] p-4 bg-cyan-950 justify-self-center self-center'>
           <h2 className='text-center text-white font-medium text-lg'>Informe creado</h2>
-          <p>Número de informe: {report.num_report}</p>
-          <p>Fecha de creación: {report.date_report}</p>
-          <p>Prioridad: {report.priority_report}</p>
-          <p>Confidencialidad: {report.confidentiality_report}</p>
-          <a href={report.link_report}>Informe</a>
+          <p className='text-white'><span className='text-cyan-500'>Número de informe:</span> {report.num_report}</p>
+          <p className='text-white'><span className='text-cyan-500'>Fecha de creación:</span> {report.date_report}</p>
+          <p className='text-white'><span className='text-cyan-500'>Prioridad:</span> {report.priority_report}</p>
+          <p className='text-white'><span className='text-cyan-500'>Confidencialidad:</span> {report.confidentiality_report}</p>
+          <a href={report.link_report} className='text-cyan-500 underline'>Abrir el informe</a>
         </section>
         <form onSubmit={handleNewsList} className='w-[450px] h-[390px] flex flex-col gap-4 p-4 justify-self-center self-center bg-cyan-950'>
           <h2 className='text-white font-medium text-center text-lg mt-4'>Crear Noticias del informe</h2>
@@ -159,7 +159,7 @@ const CreateReport = () => {
                 <div key={index} className='border border-cyan-700 flex justify-center items-center gap-2 my-1 p-2 text-white'>
                   <p className='w-1/2'><span className='text-cyan-500'>Noticia:</span> {item.issueReport}</p>
                   <div className='w-[1px] h-3/4 bg-cyan-500 mx-2' />
-                  <p className='w-1/4'><span className='text-cyan-500'>Noticia:</span> {item.tagsIssuesReport}</p>
+                  <p className='w-1/4'><span className='text-cyan-500'>Tags:</span> {item.tagsIssuesReport}</p>
                   <div className='w-[1px] h-3/4 bg-cyan-500 mx-2' />
                   <button className='w-1/4 bg-cyan-700 text-white' onClick={() => handleDeleteNews(index)}>Eliminar</button>
                 </div>
@@ -173,8 +173,8 @@ const CreateReport = () => {
           {
             news.map((item, index) => (
               <div key={index} className='border border-blue-500 my-2 p-2'>
-                <p className='text-white'>Noticia: {item.issue_report}</p>
-                <p className='text-white'>Tags: {item.tags_issues_report}</p>
+                <p className='text-white'>Noticia: {item.create_issues_report.issue_report}</p>
+                <p className='text-white'>Tags: {item.create_issues_report.tags_issues_report}</p>
               </div>
             ))
           }
