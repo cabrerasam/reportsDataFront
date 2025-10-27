@@ -44,7 +44,7 @@ const Nav = ({ role, name }) => {
           <h1 className='text-white text-2xl font-bold p-4'>UAIG</h1>
         </li>
         <li className='text-white font-thin text-lg p-4 flex items-center justify-end gap-4'>
-          <p className='flex gap-2 items-center'>Bienvenido <span className='text-custom-red'>{roleName}</span> <span className='block w-[1px] h-[20px] bg-cyan-800' /> <span>{name}</span></p>
+          <p className='flex gap-2 items-center'>Bienvenido<span className='text-custom-red'>{roleName}</span> <span className='block w-[1px] h-[20px] bg-cyan-800' /> <span>{name}</span></p>
           <button type='button' onClick={logout} className='text-cyan-200 text-sm font-normal px-2 bg-cyan-900 rounded-md hover:bg-cyan-950'>cerrar sesión</button>
         </li>
       </ul>
