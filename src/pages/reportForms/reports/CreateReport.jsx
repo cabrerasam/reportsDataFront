@@ -96,17 +96,17 @@ const CreateReport = () => {
             <p className='text-white '>Área del informe</p>
             <select name='areaReport' className='ml-2 text-cyan-950 bg-gray-100 px-2 rounded-md'>
               <option value=''>Selecionar área</option>
-              <option value='area1'>Nacional</option>
-              <option value='area2'>Internacional</option>
+              <option value='nacional'>Nacional</option>
+              <option value='internacional'>Internacional</option>
             </select>
           </label>
           <label className='grid grid-cols-2 gap-4'>
             <p className='text-white'>Tipo de Informe</p>
             <select name='typeReport' className='ml-2 text-cyan-950 bg-gray-100 px-2 rounded-md'>
               <option value=''>Selecionar tipo</option>
-              <option value='informe1'>Alerta</option>
-              <option value='informe2'>Monitoreo</option>
-              <option value='informe3'>Dominical</option>
+              <option value='alerta'>Alerta</option>
+              <option value='monitoreo'>Monitoreo</option>
+              <option value='dominical'>Dominical</option>
             </select>
           </label>
           <label className='grid grid-cols-2 gap-4'>
