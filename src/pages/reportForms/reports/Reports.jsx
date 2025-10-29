@@ -58,53 +58,35 @@ const Reports = () => {
   }
 
   return (
-    <div className='container mx-auto px-4 py-8'>
-      <div className='flex justify-between items-center mb-6'>
-        <h1 className='text-3xl font-bold text-gray-800'>Lista de Reportes</h1>
-        <div className='text-sm text-gray-600'>
-          Total: {reports.length} reporte{reports.length !== 1 ? 's' : ''}
-        </div>
-      </div>
-
-      {reports.length === 0
-        ? (
-          <div>
-            <div>No hay reportes disponibles</div>
-            <p>Los reportes aparecerán aquí cuando estén disponibles.</p>
-          </div>
-          )
-        : (
-          <div>
-            {reports.map((report) => (
-              <div key={report.id || report._id}>
-                <div>
-                  <div>
-                    <h3>
-                      {report.title || report.name || `Reporte #${report.id_report || report._id}`}
-                    </h3>
-
-                    {report.description && (
-                      <p>
-                        {report.description}
-                      </p>
-                    )}
-                  </div>
-
-                  <div>
-                    <button onClick={() => handleViewReport(report.id_report || report._id)}>
-                      Ver
-                    </button>
-
-                    <button onClick={() => handleEditReport(report.id_reportº || report._id)}>
-                      Editar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          )}
-    </div>
+    <main>
+      <h1>Informes</h1>
+      <section>
+        <h2>Filtrar</h2>
+        <p>{JSON.stringify(reports)}</p>
+      </section>
+      <section>
+        {
+          reports.length === 0
+            ? (
+              <p>No hay reportes disponibles.</p>
+              )
+            : (
+                reports.map(report => (
+                  <article key={report.id_report}>
+                    <h3><span>Informe Nro</span> {report.num_report}</h3>
+                    <p><span>Área: </span>{report.area_report}</p>
+                    <p><span>Tipo de informe: </span>{report.type_report}</p>
+                    <p><span>Fecha: </span>{report.date_report}</p>
+                    <div>
+                      <button onClick={() => handleViewReport(report.id_report)}>Ver</button>
+                      <button onClick={() => handleEditReport(report.id_report)}>Editar</button>
+                    </div>
+                  </article>
+                ))
+              )
+        }
+      </section>
+    </main>
   )
 }
 
